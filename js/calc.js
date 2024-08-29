@@ -91,8 +91,8 @@ result.addEventListener('click', function () {
   var inputString = input.innerHTML;
 
   // forming an array of numbers. eg for above string it will be: numbers = ["10", "26", "33", "56", "34", "23"]
-  var numbers = inputString.split(/\+|\-|\x|\÷/g);
-
+  var numbers = inputString.split(/\+|\-|\x|\/|\÷/g);
+  // var numbers = inputString.split(/\+|\-|\x|\//g);
   // forming an array of operators. for above string it will be: operators = ["+", "+", "-", "*", "/"]
   // first we replace all the numbers and dot with empty string and then split
   var operators = inputString.replace(/[0-9]|\./g, '').split('');
